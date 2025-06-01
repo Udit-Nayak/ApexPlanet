@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+h1 {
+    color: #ff0000;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0645AD;
+    text-decoration: none;
+} 
