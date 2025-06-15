@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // To-Do List/Note-Taking App Logic
+    // To-Do List / Note-Taking App Logic
     const todoInput = document.getElementById('todo-input');
     const addTodoBtn = document.getElementById('add-todo-btn');
     const todoList = document.getElementById('todo-list');
@@ -54,12 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Product Listing Page Logic
     const products = [
-        { id: 1, name: 'Laptop Pro', category: 'electronics', price: 1200, rating: 4.5, image: 'https://via.placeholder.com/150/0000FF/FFFFFF?text=Laptop' },
-        { id: 2, name: 'Mystery Novel', category: 'books', price: 15, rating: 4.0, image: 'https://via.placeholder.com/150/FF0000/FFFFFF?text=Book' },
-        { id: 3, name: 'T-Shirt Classic', category: 'clothing', price: 25, rating: 4.2, image: 'https://via.placeholder.com/150/00FF00/FFFFFF?text=T-Shirt' },
-        { id: 4, name: 'Smartphone X', category: 'electronics', price: 800, rating: 4.7, image: 'https://via.placeholder.com/150/FFFF00/000000?text=Phone' },
-        { id: 5, name: 'Fantasy Epic', category: 'books', price: 20, rating: 4.8, image: 'https://via.placeholder.com/150/00FFFF/000000?text=Fantasy' },
-        { id: 6, name: 'Jeans Slim Fit', category: 'clothing', price: 50, rating: 4.1, image: 'https://via.placeholder.com/150/FF00FF/FFFFFF?text=Jeans' },
+        { id: 1, name: 'Laptop Pro', category: 'electronics', price: 1200, rating: 4.5, image: 'images/laptop.jpg' },
+        { id: 2, name: 'Mystery Novel', category: 'books', price: 15, rating: 4.0, image: 'images/novel.jpg' },
+        { id: 3, name: 'T-Shirt Classic', category: 'clothing', price: 25, rating: 4.2, image: 'images/tshirt.jpg' },
+        { id: 4, name: 'Smartphone X', category: 'electronics', price: 800, rating: 4.7, image: 'images/phone.jpg' },
+        { id: 5, name: 'Cookbook', category: 'books', price: 30, rating: 4.3, image: 'images/cookbook.jpg' },
+        { id: 6, name: 'Gaming Console', category: 'electronics', price: 400, rating: 4.9, image: 'images/gaming_console.jpg' },
+        { id: 7, name: 'Desk Lamp', category: 'home', price: 45, rating: 3.8, image: 'images/lamp.jpg' },
+        { id: 8, name: 'Winter Jacket', category: 'clothing', price: 120, rating: 4.6, image: 'images/jacket.jpg' },
     ];
 
     const productList = document.getElementById('product-list');
@@ -72,10 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const productItem = document.createElement('div');
             productItem.classList.add('product-item');
             productItem.innerHTML = `
-                <img src="${product.image}" alt="${product.name}" style="width:100px; height:100px; object-fit:cover;">
+                <img src="${product.image}" alt="${product.name}">
                 <h3>${product.name}</h3>
                 <p>Category: ${product.category}</p>
-                <p class="price">$${product.price.toFixed(2)}</p>
+                <p class="price">₹${product.price.toFixed(2)}</p>
                 <p>Rating: ${product.rating}</p>
             `;
             productList.appendChild(productItem);
@@ -94,17 +96,18 @@ document.addEventListener('DOMContentLoaded', () => {
         // Sort products
         const sortOption = sortBy.value;
         switch (sortOption) {
-            case 'name-asc':
-                filtered.sort((a, b) => a.name.localeCompare(b.name));
-                break;
-            case 'name-desc':
-                filtered.sort((a, b) => b.name.localeCompare(a.name));
-                break;
             case 'price-asc':
                 filtered.sort((a, b) => a.price - b.price);
                 break;
             case 'price-desc':
                 filtered.sort((a, b) => b.price - a.price);
+                break;
+            case 'rating-desc':
+                filtered.sort((a, b) => b.rating - a.rating);
+                break;
+            case 'default':
+            default:
+                // No specific sort, maintain original order or add a default sort logic if desired
                 break;
         }
 
