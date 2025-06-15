@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Advanced Web Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#todo">To-Do App</a></li>
+                <li><a href="#products">Products</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to My Advanced Web Portfolio</h1>
+    </header>
+
+    <main>
+        <section id="home" class="section">
+            <h2>Home</h2>
+            <p>Welcome to my integrated web project showcasing various web development skills.</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>This is the about section. Here I will put some information about myself.</p>
+            <p>I am a passionate web developer with a focus on creating dynamic and responsive web applications.</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <h3>Project 1: Responsive Design</h3>
+                    <p>A web page demonstrating responsive layout using media queries.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Project 2: Interactive Carousel</h3>
+                    <p>An image carousel with navigation and dynamic content.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Project 3: API Data Fetcher</h3>
+                    <p>Fetches and displays data from a public API.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out!</p>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section id="todo" class="section">
+            <h2>To-Do List / Note-Taking App</h2>
+            <div class="todo-container">
+                <input type="text" id="todo-input" placeholder="Add a new task or note...">
+                <button id="add-todo-btn">Add</button>
+                <ul id="todo-list"></ul>
+            </div>
+        </section>
+
+        <section id="products" class="section">
+            <h2>Product Listing Page</h2>
+            <div class="filters">
+                <label for="category-filter">Filter by Category:</label>
+                <select id="category-filter">
+                    <option value="all">All</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="books">Books</option>
+                    <option value="clothing">Clothing</option>
+                </select>
+
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by">
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <option value="price-asc">Price (Low to High)</option>
+                    <option value="price-desc">Price (High to Low)</option>
+                </select>
+            </div>
+            <div id="product-list" class="product-grid">
+                <!-- Product items will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Advanced Web Portfolio</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
