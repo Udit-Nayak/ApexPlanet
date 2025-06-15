@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // To-Do List / Note-Taking App Logic
     const todoInput = document.getElementById('todo-input');
     const addTodoBtn = document.getElementById('add-todo-btn');
     const todoList = document.getElementById('todo-list');
@@ -52,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderTodos();
 
-    // Product Listing Page Logic
     const products = [
         { id: 1, name: 'Laptop Pro', category: 'electronics', price: 1200, rating: 4.5, image: 'images/laptop.jpg' },
         { id: 2, name: 'Mystery Novel', category: 'books', price: 15, rating: 4.0, image: 'images/novel.jpg' },
@@ -87,13 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function filterAndSortProducts() {
         let filtered = [...products];
 
-        // Filter by category
         const selectedCategory = categoryFilter.value;
         if (selectedCategory !== 'all') {
             filtered = filtered.filter(product => product.category === selectedCategory);
         }
 
-        // Sort products
         const sortOption = sortBy.value;
         switch (sortOption) {
             case 'price-asc':
@@ -107,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 'default':
             default:
-                // No specific sort, maintain original order or add a default sort logic if desired
                 break;
         }
 
@@ -117,6 +112,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (categoryFilter) categoryFilter.addEventListener('change', filterAndSortProducts);
     if (sortBy) sortBy.addEventListener('change', filterAndSortProducts);
 
-    // Initial display of products
     filterAndSortProducts();
 }); 
