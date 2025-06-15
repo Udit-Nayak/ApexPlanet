@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Advanced Web Project</h1>
+        
+    </header>
+
+    <main>
+        <section id="responsive" class="section">
+            <h2>1. Responsive Design Using Media Queries</h2>
+            <p>Resize your browser window to see the responsive layout changes.</p>
+            <div class="responsive-container">
+                <div class="responsive-box">Box 1</div>
+                <div class="responsive-box">Box 2</div>
+                <div class="responsive-box">Box 3</div>
+            </div>
+        </section>
+
+        <section id="carousel" class="section">
+            <h2>2. Interactive Image Carousel</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide fade">
+                    <img src="https://picsum.photos/id/237/800/400" alt="Dog">
+                    <div class="carousel-caption">Image 1: A dog looking cute.</div>
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="https://picsum.photos/id/238/800/400" alt="Forest">
+                    <div class="carousel-caption">Image 2: A dense forest.</div>
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="https://picsum.photos/id/239/800/400" alt="Mountains">
+                    <div class="carousel-caption">Image 3: Majestic mountains.</div>
+                </div>
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <section id="api-fetch" class="section">
+            <h2>3. Fetch Data from an API Using JavaScript</h2>
+            <button id="fetchDataBtn">Fetch New Joke</button>
+            <div id="data-display">
+                <p>Click the button to fetch a dad joke from an API.</p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
