@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Image Carousel Logic
     let slideIndex = 0;
     showSlides(slideIndex);
 
@@ -25,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let i;
         let slides = document.getElementsByClassName("carousel-slide");
         let dots = document.getElementsByClassName("dot");
-        if (slides.length === 0) return; // Exit if no slides found
+        if (slides.length === 0) return;
 
         if (n >= slides.length) { slideIndex = 0 }
         if (n < 0) { slideIndex = slides.length - 1 }
@@ -38,8 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[slideIndex].style.display = "block";
         dots[slideIndex].className += " active";
     }
-
-    // API Data Fetcher Logic
     const fetchDataBtn = document.getElementById('fetchDataBtn');
     const dataDisplay = document.getElementById('data-display');
 

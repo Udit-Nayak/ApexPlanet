@@ -38,7 +38,6 @@ nav ul li a {
     max-width: 960px;
 }
 
-/* Responsive Design Styles */
 .responsive-container {
     display: flex;
     flex-wrap: wrap;
@@ -58,7 +57,7 @@ nav ul li a {
     box-sizing: border-box;
 }
 
-/* Media Queries for Responsive Design */
+
 @media (max-width: 768px) {
     .responsive-box {
         flex: none;
@@ -72,7 +71,6 @@ nav ul li a {
     }
 }
 
-/* Carousel Styles */
 .carousel-container {
     position: relative;
     max-width: 800px;
@@ -103,7 +101,6 @@ nav ul li a {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -129,7 +126,6 @@ nav ul li a {
     background-color: rgba(0,0,0,0.8);
 }
 
-/* Dots for carousel */
 .dot {
     cursor: pointer;
     height: 15px;
@@ -145,7 +141,6 @@ nav ul li a {
     background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -156,7 +151,6 @@ nav ul li a {
     to {opacity: 1}
 }
 
-/* API Fetcher Styles */
 #api-fetch button {
     background-color: #28a745;
     color: white;
